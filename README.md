@@ -1,7 +1,26 @@
-# autotmux
-tmux auto scripts
+- [autotmux](#autotmux)
+  - [自定义配置autotmux](#自定义配置autotmux)
+  - [tmux 使用](#tmux-使用)
+  - [tmux 快捷键](#tmux-快捷键)
+  - [会话的快捷键](#会话的快捷键)
+  - [窗口的快捷键](#窗口的快捷键)
+  - [窗格的快捷键](#窗格的快捷键)
+  - [鼠标支持](#鼠标支持)
+  - [复制粘贴](#复制粘贴)
+  - [自动保存会话](#自动保存会话)
+  - [去掉小圆点](#去掉小圆点)
 
-## 一、自定义配置autotmux
+# autotmux
+
+autotmux脚本也是一种保存会话的方式，可以每次自动输入自己想要的命令。
+
+```bash
+$ autotmux
+```
+![autotmux](./autotmux.png)
+
+## 自定义配置autotmux
+
 Using *root* privileges to exec cmds as follows:
 ```bash
 $ cp /etc/tmux.conf /etc/
@@ -13,14 +32,6 @@ $ mv autotmux /usr/bin/
 $ chmod 777 autotmux
 ```
 
-使用autotmux脚本
-
-autotmux脚本也是一种保存会话的方式，可以每次自动输入自己想要的命令。
-
-```bash
-$ autotmux
-```
-![autotmux](./autotmux.png)
 
 ## tmux 使用
 
@@ -32,7 +43,6 @@ tmux 有主要两个用途：
 
 - 会话与窗口解绑。当窗口意外关闭时，会话并不会终止，当使用SSH远程登录计算机时，可以不受断网的影响。
 
-### tmux 术语
 
 tmux 采用 client/server模型，主要有四个模块：
 
@@ -43,7 +53,7 @@ tmux 采用 client/server模型，主要有四个模块：
 
 执行 tmux 命令时，即开启了一个服务，并创建了一个会话、窗口和窗格。
 
-### tmux 快捷键
+## tmux 快捷键
 
 会话相关命令：
 
@@ -63,7 +73,7 @@ tmux 有大量快捷键，所有的快捷键都需要通过前缀键唤起，默
 
 可以配置`~/.tmux.conf`将默认前缀改为`ctrl+a`。
 
-### 会话的快捷键
+## 会话的快捷键
 
 s：列出所有会话
 
@@ -71,7 +81,7 @@ d：离开当前会话
 
 $：重命名当前会话
 
-### 窗口的快捷键
+## 窗口的快捷键
 
 c：创建一个新窗口
 
@@ -85,7 +95,7 @@ w：从列表中选择窗口
 
 x: kill当前窗口
 
-### 窗格的快捷键
+## 窗格的快捷键
 
 %：分成左右两个窗格
 
@@ -115,7 +125,7 @@ Alt+o：下移当前窗格
 
 space：切换窗格布局
 
-### 鼠标支持
+## 鼠标支持
 
 鼠标支持的内容：
 
@@ -139,14 +149,14 @@ $ tmux source ~/.tmux.conf
 或者在tmux窗口中: source-file ~/.tmux.conf
 ```
 
-### 复制粘贴
+## 复制粘贴
 
 [ 复制模式，光标移动到复制内容位置，空格键开始，方向键选择复制，回车确认，q/Esc退出
 
 ] 进入粘贴模式，粘贴之前复制的内容，按q/Esc退出
 
 
-### 自动保存会话
+## 自动保存会话
 
 为了防止突然关机和其他异常，可以手动保存会话。
 
@@ -181,7 +191,7 @@ set -g @continuum-restore 'on' # 启用自动恢复
 `ctrl+a ctrl+s`保存会话，`ctrl+a ctrl+r`恢复会话，或者每天都会自动保存会话。
 
 
-### 去掉小圆点
+## 去掉小圆点
 
 终端下输入`tmux a -d`，或者tmux会话中`ctrl+a :`，输入以下命令
 ```shell
