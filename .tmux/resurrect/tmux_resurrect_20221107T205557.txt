@@ -1,0 +1,13 @@
+pane	0	0	:bash	1	:*	0	:/home/yushuoqi/code/ffmpeg	1	bash	:
+pane	0	1	:journey	0	:-	0	:/home/yushuoqi/code/journey/work	1	bash	:
+pane	0	2	:tmux	0	:	0	:/home/yushuoqi/code/autotmux	1	bash	:
+pane	0	3	:gdb	0	:	0	:/home/yushuoqi/code/gdb	1	gdb	:gdb ./test
+pane	0	4	:bash	0	:	0	:/home/yushuoqi/code/kylin-music	1	bash	:
+pane	0	5	:ssh	0	:	0	:/home/yushuoqi/code/vim	1	vim	:vim README.md
+window	0	0	1	:*	cfbe,135x39,0,0,1
+window	0	1	0	:-	cfbf,135x39,0,0,2
+window	0	2	0	:	cfc0,135x39,0,0,3
+window	0	3	0	:	cfc1,135x39,0,0,4
+window	0	4	0	:	cfc4,135x39,0,0,7
+window	0	5	0	:	cfc5,135x39,0,0,8
+state	0	
